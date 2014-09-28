@@ -2,11 +2,14 @@ lua.util
 ========
 lua.util is a module with some convenient utilities not included with the standard Lua install.
 
+
 ###Array
 ######Description
 Arrays are ordered, integer-indexed collections of any object.
 
 ######Basic Usage
+
+Add 'lua' folder to your project and use `require 'lua.util.array'` at the top of your file or in `main.lua(Corona SDK project)`. 
 
 ========
 An array is created using `#new`
