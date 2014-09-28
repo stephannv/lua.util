@@ -37,6 +37,19 @@ array:add(3)
 array:get(1) --returns 'element'
 array:at(2) --returns 3
 ```
+========
+
+Use `:size` and `:length` to get the number of elements in array
+```Lua
+array = Array:new()
+
+array:size() --returns 0
+
+array:add('element 1')
+array:add('element 2')
+
+array:length() --returns 2
+```
 
 ========
 
@@ -73,9 +86,26 @@ new_array = array:select_if(function(element)
   return element > 2
 end)
 
-new_array:get(1) --prints '3'
-new_array:get(2) --prints '4'
+new_array:get(1) --returns '3'
+new_array:get(2) --returns '4'
 ```
 ========
+
+`:delete_if` deletes every element of self for which block evaluates to true
+```Lua
+array = Array:new()
+
+array:add(1)
+array:add(2)
+array:add(3)
+array:add(4)
+
+array:delete_if(function(element)
+  return element < 3
+end)
+
+array:get(1) --returns '3'
+array:get(2) --returns '4'
+```
 
 ##under construction...
