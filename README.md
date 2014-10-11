@@ -110,5 +110,22 @@ end)
 array:get(1) --returns '3'
 array:get(2) --returns '4'
 ```
+========
+
+`:delete_at` deletes the element at the specified index, returning that element, or nil if the index is out of range
+```Lua
+array = Array:new()
+
+array:add('banana')
+array:add('apple')
+array:add('grape')
+array:add('orange')
+
+removed_element = array:delete_at(2)
+
+print(removed_element) --prints 'apple'
+print(array:size()) --prints '3'
+print(array:at(2)) --prints 'grape'
+```
 
 ##under construction...
