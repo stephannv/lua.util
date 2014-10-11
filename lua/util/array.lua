@@ -47,6 +47,16 @@ function Array.new()
 		self:_compact( self_size )
 	end
 
+	function array:delete_at( index )
+		local self_size = #_elements
+		local removed_element = _elements[index]
+		if removed_element then
+			_elements[index] = nil
+			self:_compact( self_size )
+		end
+		return removed_element
+	end
+
 	function array:_compact( max_length )
 		local max_length = max_length
 		for i = 1, max_length do
