@@ -116,3 +116,12 @@ test('Array', ':is_empty', 'Returns true if array contains no elements.', functi
 	array:delete_at(1)
 	assert_equal( array:is_empty(), true )
 end)
+
+test('Array', ':first', 'Returns the first element.', function()
+	assert_equal( array:first(), nil )
+
+	array:add(1)
+	array:add(2)
+
+	assert_equal( array:first(), 1 )
+end)

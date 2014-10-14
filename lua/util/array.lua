@@ -83,6 +83,10 @@ function Array.new()
 		return #_elements == 0
 	end
 
+	function array:first()
+		return _elements[1]
+	end
+
 	return array
 end
 
