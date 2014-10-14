@@ -106,3 +106,13 @@ test('Array', ':delete_at', 'Deletes the element at the specified index, returni
 	assert_equal( removed_element, 3 )
 	assert_equal( array:at(3), 4)
 end)
+
+test('Array', ':is_empty', 'Returns true if array contains no elements.', function()
+	assert_equal( array:is_empty(), true )
+
+	array:add(1)
+	assert_equal( array:is_empty(), false )
+	
+	array:delete_at(1)
+	assert_equal( array:is_empty(), true )
+end)

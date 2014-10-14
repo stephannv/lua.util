@@ -79,6 +79,10 @@ function Array.new()
 		return self:size()
 	end
 
+	function array:is_empty()
+		return #_elements == 0
+	end
+
 	return array
 end
 
